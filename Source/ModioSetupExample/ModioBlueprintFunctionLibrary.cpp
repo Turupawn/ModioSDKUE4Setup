@@ -21,7 +21,6 @@ void UModioBlueprintFunctionLibrary::modioGetMods()
 			for (int i = 0; i<mods.size(); i++)
 			{
 				const modio::Mod mod = mods[i];
-				int x = 69;
 
 				const int32 mod_id = mods[i].id;
 				FString mod_name(mods[i].name.c_str());
