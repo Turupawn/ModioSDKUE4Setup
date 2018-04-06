@@ -7,7 +7,7 @@ In this tutorial we are going to cover how to install and use the mod.io SDK fun
 # Step 1: Load the mod.io SDK
 
 1. Create a [ThirdParty/modio Directory](ThirdParty/modio) and create a `Includes` and `Libraries` directory inside it.
-2. Download the mod.io SDK, extract it.
+2. Download the [mod.io SDK](https://github.com/DBolical/modioSDK/releases), extract it.
 3. Locate the files provided by the mod.io SDK and place them on your UE4 project accordingly:
   * Locate the `include` folder, create a directory named `ThirdParty/modio/Includes/` and place it contents there.
   * Locate the `modio.lib` file under the `NMake` libraries folder, create a directory named `ThirdParty/modio/Libraries/` and place it there.
