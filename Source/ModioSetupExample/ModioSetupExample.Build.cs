@@ -38,6 +38,8 @@ public class ModioSetupExample : ModuleRules
             string PlatformString = (Target.Platform == UnrealTargetPlatform.Win64) ? "x64" : "x86";
             string LibrariesPath = Path.Combine(ThirdPartyPath, "modio", "Libraries");
 
+            PublicDelayLoadDLLs.Add("modio.dll");
+
             PublicAdditionalLibraries.Add(Path.Combine(LibrariesPath, "modio.lib"));
         }
 

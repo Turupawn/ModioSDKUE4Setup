@@ -5,6 +5,7 @@
 #include "Modules/ModuleManager.h"
 
 modio::Instance *modio_instance;
+void* dll_handle;
 
 class MyCustomGameModule : public FDefaultGameModuleImpl
 {
@@ -13,6 +14,8 @@ class MyCustomGameModule : public FDefaultGameModuleImpl
 	*/
 	virtual void StartupModule() override
 	{
+		FString modio_dll_path = *FPaths::GamePluginsDir() + FString("modio/modio.dll");
+		dll_handle = FPlatformProcess::GetDllHandle(*modio_dll_path);
 		modio_instance = new modio::Instance(MODIO_ENVIRONMENT_TEST, 7, "e91c01b8882f4affeddd56c96111977b");
 	}
 
@@ -21,6 +24,7 @@ class MyCustomGameModule : public FDefaultGameModuleImpl
 	*/
 	virtual void ShutdownModule()
 	{
+		FPlatformProcess::FreeDllHandle(dll_handle);
 		delete modio_instance;
 	}
 };
