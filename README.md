@@ -21,7 +21,7 @@ In this tutorial we are going to cover how to install and use the mod.io SDK fun
 
 # Step 3: Use mod.io from your blueprints
 
-1. Create a UE4 Blueprint Library. 
+1. Create a UE4 Blueprint Library by selecting `File` -> `Add C++ Class` -> `Blueprint Function Library`. 
 1. Define all the methods in your [Modio Blueprint Library Header](Source/ModioSetupExample/ModioBlueprintFunctionLibrary.h).
 2. Implement them on your [Modio Blueprint Library Source](Source/ModioSetupExample/ModioBlueprintFunctionLibrary.cpp).
 3. You can now use the methods from your blueprints:
@@ -29,3 +29,16 @@ In this tutorial we are going to cover how to install and use the mod.io SDK fun
 ![](pics/get_mods.png)
 
 ![](pics/tick.png)
+
+# Further reading
+
+## mod.io documentation
+
+* [SDK documentation](https://github.com/DBolical/modioSDK/wiki)
+* [SDK Code Examples](https://github.com/DBolical/modioSDK/tree/master/examples/c%2B%2B)
+* [API Documentation](https://docs.mod.io/)
+
+## UE4 knowledge needed to do this tutorial
+* [Plugins](https://docs.unrealengine.com/en-us/Programming/Plugins)
+* [Linking DLLs](https://wiki.unrealengine.com/Linking_Dlls)
+* [Creating C++ functions as new Blueprints Nodes](https://wiki.unrealengine.com/Blueprints,_Creating_C%2B%2B_Functions_as_new_Blueprint_Nodes)
